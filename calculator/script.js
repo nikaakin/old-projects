@@ -24,7 +24,7 @@ let functions = {
     '←': function () {return total = total.slice(0, -1);},
     '=': function () { 
        if(total) numbers.push(+total);
-       total ='';
+       
        let sumHolder = 0;
        sumHolder = +numbers[0];
        
@@ -35,7 +35,7 @@ let functions = {
                logs.textContent += ` ${operators[i]} ${numbers[i+1]} `;
        });
        logs.textContent += ` = ${sumHolder} ----- `
-
+       total = `${sumHolder}`;
        operators =[];
        numbers = [];
 
@@ -59,7 +59,7 @@ const numCheck = function (target) {
 }
 
 const fnCheck = function (target) {
-    if(target.classList.contains('functions')  && total && total.slice(-1) !== '.' ){
+    if(target.classList.contains('functions')  && total ){
        
         numbers.push(+total);
         total ='';
