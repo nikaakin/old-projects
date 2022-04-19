@@ -8,6 +8,8 @@ const logBtn = document.querySelector('.title');
 let total ='';
 let numbers =[];
 let operators =[];
+let dot = 0;
+let equationCount = 1;
 
 let operatorFn = {
     '+': function (a, b) {return a + b},
@@ -24,15 +26,20 @@ let functions = {
        if(total) numbers.push(+total);
        total ='';
        let sumHolder = 0;
-       operators.forEach( function (n, i){
+       sumHolder = +numbers[0];
+       
+       logs.textContent += `equation ${equationCount++}: ${numbers[0]}` 
+       operators.forEach( function (_, i){
            if(numbers[i+1])
-               sumHolder += operatorFn[operators[i]](numbers[i], numbers[i+1]);
-           
+               sumHolder = operatorFn[operators[i]](sumHolder, +numbers[i+1]);
+               logs.textContent += ` ${operators[i]} ${numbers[i+1]} `;
        });
+       logs.textContent += ` = ${sumHolder} ----- `
+
        operators =[];
        numbers = [];
-        sumHolder;
-       return sumHolder ;
+
+      return sumHolder ;
     },
     'AC': function () {
         operators =[];
@@ -44,9 +51,10 @@ let functions = {
 const numCheck = function (target) {
     if(target.classList.contains('num')) 
     {
-        
+    
     total += target.textContent;
     screen.textContent += target.textContent;
+
  }
 }
 
@@ -55,6 +63,7 @@ const fnCheck = function (target) {
        
         numbers.push(+total);
         total ='';
+        dot =0;
         operators.push(target.textContent);
         screen.textContent +=target.textContent;
     }
@@ -69,13 +78,36 @@ const fnCheck2 = function (target) {
 }
 
 
+const dotCheck = function (target) {
+    if(target.classList.contains('dot'))
+    if(dot) {
+        alert('not cool')
+        }
+    else {
+        total += target.textContent;
+        screen.textContent += target.textContent;
+        dot++;
+         }
+     
+}
+
 buttons.addEventListener('click', function (e) {
     numCheck(e.target);
     fnCheck(e.target);
    fnCheck2(e.target);
+   dotCheck(e.target);
 })
 
-logBtn.addEventListener('click', () => {
-    logs.innerHTML = `Numbers: ${numbers}. <br>
-    Operators: ${operators}. `
+// function displayLogs () {
+//     operators.forEach( function (_, i){
+//         if(numbers[i+1])
+//             sumHolder = operatorFn[operators[i]](sumHolder, +numbers[i+1]);
+       
+//     })
+    
+// }
+
+logBtn.addEventListener('click',() =>{
+    logs.innerHTML = '';
+    equationCount = 1;
 })
