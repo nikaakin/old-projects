@@ -1,7 +1,7 @@
 
 
 const buttons = document.querySelector('.calc-btns');
-const screen = document.querySelector('.calc-screen');
+const screen = document.querySelector('.screen');
 const logs = document.querySelector('.log-screen');
 const logBtn = document.querySelector('.title');
 
@@ -21,7 +21,12 @@ let operatorFn = {
 
 
 let functions = {
-    '←': function () {return total = total.slice(0, -1);},
+    '←': function () { if(total) 
+        { return total = screen.textContent.slice(0, -1)}
+        else{
+            operators.pop();
+            return total =screen.textContent.slice(0, -1);}
+    },
     '=': function () { 
        if(total) numbers.push(+total);
        
