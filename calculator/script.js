@@ -45,8 +45,8 @@ const numCheck = function (target) {
     if(target.classList.contains('num')) 
     {
         
-    total += +target.textContent;
-    screen.textContent = total;
+    total += target.textContent;
+    screen.textContent += target.textContent;
  }
 }
 
