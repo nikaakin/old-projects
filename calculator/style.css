@@ -53,8 +53,9 @@ body{
     height: auto;
     display: flex;
     align-items: flex-end;
+    justify-content: flex-end;
     padding: 4px;
-    /* word-wrap: break-word; */
+
 }
 
 .screen{
