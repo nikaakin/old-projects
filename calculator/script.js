@@ -98,15 +98,6 @@ buttons.addEventListener('click', function (e) {
    dotCheck(e.target);
 })
 
-// function displayLogs () {
-//     operators.forEach( function (_, i){
-//         if(numbers[i+1])
-//             sumHolder = operatorFn[operators[i]](sumHolder, +numbers[i+1]);
-       
-//     })
-    
-// }
-
 logBtn.addEventListener('click',() =>{
     logs.innerHTML = '';
     equationCount = 1;
