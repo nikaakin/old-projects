@@ -59,7 +59,7 @@ const numCheck = function (target) {
 }
 
 const fnCheck = function (target) {
-    if(target.classList.contains('functions')  && total ){
+    if(target.classList.contains('functions')  && total && total.slice(-1) !== '.' ){
        
         numbers.push(+total);
         total ='';
