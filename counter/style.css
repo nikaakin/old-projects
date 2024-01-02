@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size:16px;
+}
+
+.header{
+  background-color: rgba(7, 180, 79, 0.719);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+ width:70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  margin-bottom: 20rem;
+}
+
+.btn{
+  background-color:rgb(48 115 135);
+  border: none;
+  padding: 1.5rem 2.7rem;
+  font-size: 30px;
+  color: white;
+  transition: transform 100ms ease-in;
+}
+
+.btn:active{
+  transform: translateY(5px);
+}
+
+
+.box{
+  background-color: darkgoldenrod;
+  padding: 3rem 6rem;
+  color: white;
+  font-size: 40px;
+}
+
