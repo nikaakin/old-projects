@@ -1,0 +1,88 @@
+:root {
+  --bg-main: rgba(224, 224, 224, 0.267);
+  --bg-inactive: rgba(211, 190, 190, 0.719);
+  --bg-active: rgba(179, 60, 60, 0.699);
+  --col-inactive: rgb(119, 111, 111);
+  --col-active-num: rgb(248, 242, 242);
+  --col-active-word: rgb(19, 17, 17);
+}
+
+.big-ones {
+  margin: auto;
+  padding: 1px;
+  height: 3px;
+  width: 100%;
+  background-color: var(--bg-inactive);
+}
+
+.progress-bar--wrapper {
+  display: flex;
+  gap: 10px;
+  background-color: var(--bg-main);
+  padding-block: 30px;
+}
+
+.middle-one {
+  display: flex;
+  gap: 10px;
+}
+
+.lil-ones {
+  margin: auto;
+  padding: 1px;
+  height: 3px;
+  width: 20vw;
+  background-color: var(--bg-inactive);
+  border-radius: 10px;
+}
+
+.number-word {
+  display: flex;
+  justify-content: center;
+  color: var(--col-inactive);
+}
+.number {
+  font-weight: 600;
+  position: relative;
+  text-align: center;
+  padding: 7px 12px;
+  border-radius: 100%;
+  background-color: var(--bg-inactive);
+}
+
+.word {
+  position: absolute;
+  letter-spacing: 1.2px;
+  font-size: 18px;
+  transform: translateY(150%);
+}
+
+.line {
+  animation: progress 1s forwards ease-out;
+}
+.round {
+  color: var(--col-active-num);
+  animation: round 0.5s forwards ease;
+  animation-delay: 0.5s;
+}
+
+.clr {
+  color: var(--col-active-word);
+}
+
+@keyframes progress {
+  from {
+    background-color: var(--bg-inactive);
+  }
+  to {
+    background-color: var(--bg-active);
+  }
+}
+@keyframes round {
+  from {
+    background-color: var(--bg-inactive);
+  }
+  to {
+    background-color: var(--bg-active);
+  }
+}

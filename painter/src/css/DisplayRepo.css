@@ -1,0 +1,41 @@
+.user-wrapper {
+  padding: 2rem 0.4rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.user-wrapper img:first-child {
+  border-radius: 100%;
+}
+
+.userinfo-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.top-info {
+  display: flex;
+}
+
+.top-info > * {
+  position: relative;
+  padding: 0.2rem 0.6rem;
+
+  color: rgb(24, 61, 55);
+  text-decoration: none;
+}
+
+.top-info > *:not(:last-child):hover {
+  background-color: rgba(0, 0, 0, 0.096);
+}
+
+.top-info > *::after {
+  content: "";
+  position: absolute;
+  border-right: 2px solid rgb(55, 134, 168);
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+}

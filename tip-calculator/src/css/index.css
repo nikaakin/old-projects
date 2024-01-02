@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Space+Mono:wght@700&display=swap");
+
+.font-space {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  * {
+    font-size: 14px;
+  }
+  img {
+    width: 12px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  * {
+    font-size: 10px;
+  }
+  img {
+    width: 11px;
+  }
+}
+@media only screen and (max-width: 530px) {
+  * {
+    font-size: 10px;
+  }
+  .lil-screen--flex {
+    flex-direction: column;
+  }
+  .lil-screen--width {
+    width: 100%;
+  }
+  .lil-screen--translate {
+    transform: translateY(-20px);
+  }
+  .lil-screen--grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

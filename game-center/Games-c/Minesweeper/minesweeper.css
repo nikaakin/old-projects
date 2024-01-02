@@ -1,0 +1,149 @@
+
+/* -------------------------- */
+/* minesweeper ------------- */
+/* ------------------------ */
+
+.minesweeper-title{
+    background-color: #000000;
+    color: #eee;
+    font-weight: 900;
+    font-size: 20px;
+}
+.minesweeper-title--name{
+    text-align: center;
+}
+.minesweeper-title--wrapper{
+    position: relative;
+    height: 30px;
+}
+.minesweeper-title--clock{
+    position: absolute;
+    left:0%;
+}
+.minesweeper-title--count{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.minesweeper-title--flag{
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    left: 100%;
+    transform: translateX(-100%);
+}
+
+.minesweeper-title--flag:hover{
+    background-color: #c7c7c7;
+}
+
+
+.minesweeper-grid{
+    display: grid;
+    grid-template-columns: repeat(var(--var), 1fr);
+    min-height: 80vh;
+}
+.minesweeper-square{
+    display: flex;
+    background-color: #335a5e;
+    color: #335a5e;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000;
+    
+}
+
+.minesweeper-square:hover{
+    background-color: #0d222b;
+    color: #0d222b;
+}
+
+.minesweeper-clicked{
+    color: #a51313;
+    background-color: #eee;
+    font-size: 20px;
+    font-weight: 700;
+    height: auto;
+}
+
+
+.minesweeper-clicked:hover{
+    color: #0d222b;
+    background-color: #eee;
+}
+
+.minesweeper-flagged{
+    background-color: rgb(165, 52, 52);
+}
+.minesweeper-flag-clicked {
+    background-color: #0d255a;
+    transform: translateX(-100%);
+    height: 130%;
+}
+.minesweeper-level-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.minesweeper-game-level{
+    border: none;
+    font-size: 24px;
+    color: #eee;
+    background-color: #389b5e;
+    transition: all 150ms ease-in;
+}
+.minesweeper-game-level:hover{
+    color: #c7c7c7;
+    background-color: #136131;
+    transform: translateY(2px);
+}
+/* -------------------------- */
+/* minesweeper -----END----- */
+/* ------------------------ */
+
+
+
+/* media ----------------------------- */
+@media screen and (max-width: 900px) {
+
+    .minesweeper-title--name{
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .minesweeper-title--count{
+        font-size: 12px;
+    }
+    .minesweeper-title--clock{
+        font-size: 12px;
+    }
+    .minesweeper-game-level{
+        font-size: 12px !important;
+    }
+    .minesweeper-clicked{
+        font-size: 10px !important;
+    }
+ 
+}
+
+@media screen and (max-width: 450px) {
+
+    .minesweeper-title--name{
+        font-weight: 600;
+        font-size: 12px;
+    }
+    .minesweeper-title--count{
+        font-size: 12px;
+    }
+    .minesweeper-title--clock{
+        font-size: 12px;
+    }
+    .minesweeper-game-level{
+        font-size: 12px !important;
+    }
+    .minesweeper-clicked{
+        font-size: 8px !important;
+    }
+}
+
+/* media ----------------------- END*/
+
