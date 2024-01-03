@@ -6,7 +6,7 @@
 
 Api heavy project for displaying countries and their details.
 
-### Live version: https://countries-five-gray.vercel.app/
+### Live version: https://countries-nikaakin.vercel.app/
 
 #
 
